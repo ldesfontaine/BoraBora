@@ -1,0 +1,15 @@
+# On active la réécriture d'URL
+RewriteEngine On
+
+# On désactive l'accès aux répertoires
+Options -Indexes
+
+# On redirige les requêtes non existantes vers home.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php/$1 [L]
+
+## Désactiver l'accès direct aux fichiers PHP
+RewriteRule ^src/php/ - [F,L]
+
+
