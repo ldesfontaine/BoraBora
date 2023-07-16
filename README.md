@@ -1,1 +1,5 @@
-Dans /connexion il faut copier le fichier exemple de conf et le coller sous le format php avec les bons identifiants de la bdd
+DB : infos de connexion -> src/php/Entity/dbconnect.php
+host = "localhost"
+db_name = "borabora"
+username = "root"
+password = ""
